@@ -8,7 +8,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "Q1_BASE_2.csv"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "Q1_BASE_3.csv"
 MODEL = "gpt-5"
 # -----------------------------
 

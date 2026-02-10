@@ -23,7 +23,7 @@ from llama_parse import LlamaParse
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "Q1_RAG_1.csv"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "Q1_RAG_3.csv"
 MODEL = "gpt-5"
 # -----------------------------
 
@@ -64,7 +64,7 @@ def main():
     Settings.chunk_overlap = 128
 
     QA_PROMPT_STR = """
-Guidelines excerpt:
+Guidelines:
 ---------------------
 {context_str}
 ---------------------
@@ -99,7 +99,7 @@ Question: {query_str}
 
     retriever = VectorIndexRetriever(
         index=index,
-        similarity_top_k=30,
+        similarity_top_k=20,
     )
 
     query_engine = RetrieverQueryEngine(
@@ -108,7 +108,7 @@ Question: {query_str}
             SimilarityPostprocessor(similarity_cutoff=0.25),
             SentenceTransformerRerank(
                 model="cross-encoder/ms-marco-MiniLM-L-6-v2",
-                top_n=15,
+                top_n=10,
             ),
         ],
     )
