@@ -1,8 +1,8 @@
+# claude_RAG.py
 from dotenv import load_dotenv
 from pathlib import Path
 import os
 import csv
-from anthropic import Anthropic
 
 from llama_index.core import (
     VectorStoreIndex,
@@ -10,7 +10,6 @@ from llama_index.core import (
     Settings,
     PromptTemplate,
 )
-from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.retrievers import VectorIndexRetriever
@@ -19,22 +18,23 @@ from llama_index.core.postprocessor import SimilarityPostprocessor
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_parse import LlamaParse
 
+from llama_index.llms.anthropic import Anthropic
+
 
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "Q1_RAG_3.csv"
-MODEL = "gpt-5"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "claude_Q1_RAG_3.csv"
+MODEL = "claude-opus-4-6"
 # -----------------------------
-
 
 
 SYSTEM_PROMPT = """
 You are an expert acute ischemic stroke answering assistant.
 Follow any instructions given in the user message exactly, especially:
 - Answer directly.
-- Answer in one sentence.
+- Return exactly ONE sentence (no line breaks).
 - Use complete sentences with rationale.
 - Always provide an answer.
 """.strip()
@@ -43,22 +43,26 @@ Follow any instructions given in the user message exactly, especially:
 def main():
     load_dotenv()
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    anthropic_api_key = os.getenv("ANTHROPIC_API_KEY")
     llama_parse_key = os.getenv("LLAMA_PARSE_API_KEY")
-    oa_api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise ValueError("OPENAI_API_KEY not found in .env file")
+    openai_api_key = os.getenv("OPENAI_API_KEY")
 
-    llm = OpenAI(
+    if not anthropic_api_key:
+        raise ValueError("ANTHROPIC_API_KEY not found in .env file")
+    if not llama_parse_key:
+        raise ValueError("LLAMA_PARSE_API_KEY not found in .env file")
+    if not openai_api_key:
+        raise ValueError("OPENAI_API_KEY not found in .env file (needed for embeddings)")
+
+    llm = Anthropic(
         model=MODEL,
-        api_key=api_key,
+        api_key=anthropic_api_key,
         temperature=0,
         system_prompt=SYSTEM_PROMPT,
     )
-
     embed_model = OpenAIEmbedding(
         model="text-embedding-3-large",
-        api_key=oa_api_key,
+        api_key=openai_api_key,
         dimensions=3072,
     )
 
