@@ -9,8 +9,8 @@ import re
 
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
-INPUT_CSV = BASE_DIR / "responses" / "claude_Q1_BASE_2.csv"
-OUTPUT_CSV = BASE_DIR / "responses" / "claude_Q1_BASE_2_GRADED.csv"
+INPUT_CSV = BASE_DIR / "responses" / "llama_Q1_BASE_3.csv"
+OUTPUT_CSV = BASE_DIR / "responses" / "llama_Q1_BASE_3_GRADED.csv"
 REFERENCE_ANSWERS = BASE_DIR /'QA'/ "A1.txt"
 MODEL = "gpt-5"
 # ----------------------------
