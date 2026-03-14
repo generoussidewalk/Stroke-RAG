@@ -1,0 +1,15 @@
+A: Tenecteplase (0.25 mg/kg, max 25 mg) or alteplase (0.9 mg/kg) are both recommended within 4.5 hours; tenecteplase is not inferior and is recommended to improve functional outcomes.
+A: Initiate IV thrombolysis as quickly as possible within 4.5 hours without delaying for additional multimodal imaging, assuming eligibility and safe administration.
+A: Extended-window thrombolysis is reasonable using advanced imaging criteria (DWI-FLAIR or perfusion mismatch) in selected patients with unknown onset or 4.5–9 hours from onset.
+A: For minor noncardioembolic stroke (NIHSS ≤5) who did not receive IVT and presumed atherosclerotic cause, dual antiplatelet therapy (clopidogrel plus aspirin) for 21 days followed by single antiplatelet therapy is reasonable.
+A: Direct transport to a distant thrombectomy-capable center does not improve 3-month outcomes compared with transport to a local stroke center when systems are well coordinated; transport to the closer stroke center is appropriate.
+A: Endovascular thrombectomy within 24 hours is recommended for basilar artery occlusion in eligible patients (NIHSS ≥10, mRS 0–1, PC-ASPECTS ≥6) to improve functional outcome and reduce mortality.
+A: Adjuvant antithrombotic agents (e.g., argatroban, eptifibatide) are not recommended with IV thrombolysis, as they do not improve outcomes.
+A: Avoid intensive glucose control (80–130 mg/dL) due to hypoglycemia risk; target systolic BP 140–180 mm Hg, and avoid intensive lowering below 140 mm Hg even after reperfusion.
+A: Pediatric patients with large vessel occlusion may be considered for endovascular intervention in experienced centers; early recognition and specialist management are emphasized.
+A: When available, mobile stroke units are preferred due to faster identification and treatment of thrombolytic-eligible patients.
+A: Intravenous glibenclamide does not improve functional outcomes in large hemispheric infarction and is not recommended.
+A: Pharyngeal electrical stimulation can be beneficial to reduce dysphagia severity and aspiration risk in patients with stroke-related dysphagia.
+A: Preoperative tirofiban before EVT is not useful and is not recommended to improve 90-day functional outcomes.
+A: Adult stroke screening tools are not reliable in children; pediatric-adapted tools such as PedNIHSS and PedRACE should be used.
+A: For minor noncardioembolic AIS with ≥50% stenosis who did not receive IVT, dual antiplatelet therapy for 21 days followed by single antiplatelet therapy is reasonable to reduce 90-day recurrent stroke risk.

@@ -23,8 +23,8 @@ from llama_index.llms.ollama import Ollama
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "llama_Q1_RAG_3.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "llama_Q2_RAG_6.csv"
 # -----------------------------
 
 

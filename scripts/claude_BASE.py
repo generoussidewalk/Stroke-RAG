@@ -8,8 +8,8 @@ import os
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "claude_Q1_BASE_3.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "claude_Q2_BASE_6.csv"
 MODEL = "claude-opus-4-6"
 # -----------------------------
 
