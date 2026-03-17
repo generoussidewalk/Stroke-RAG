@@ -24,8 +24,8 @@ from llama_index.llms.google_genai import GoogleGenAI
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q1.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q1_RAG_1.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q2_RAG_6.csv"
 MODEL = "gemini-2.5-flash"
 # -----------------------------
 
@@ -43,7 +43,7 @@ Follow any instructions given in the user message exactly, especially:
 def main():
     load_dotenv()
 
-    google_api_key = os.getenv("GEMINI_API_KEY")
+    google_api_key = os.getenv("GOOGLE_API_KEY")
     llama_parse_key = os.getenv("LLAMA_PARSE_API_KEY")
     openai_api_key = os.getenv("OPENAI_API_KEY")
 
@@ -53,6 +53,7 @@ def main():
         raise ValueError("LLAMA_PARSE_API_KEY not found in .env file")
     if not openai_api_key:
         raise ValueError("OPENAI_API_KEY not found in .env file (needed for embeddings)")
+
 
     llm = GoogleGenAI(
         model=MODEL,
