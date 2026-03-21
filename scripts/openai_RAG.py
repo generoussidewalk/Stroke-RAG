@@ -23,8 +23,8 @@ from llama_parse import LlamaParse
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "gpt_Q2_RAG_6.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q3.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "gpt_Q3_RAG_1.csv"
 MODEL = "gpt-5"
 # -----------------------------
 

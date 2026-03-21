@@ -223,8 +223,8 @@ from google.genai import types
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q2_BASE_6.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q3.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q3_BASE_1.csv"
 MODEL = "gemini-2.5-flash"
 MAX_OUTPUT_TOKENS = 1024
 # -----------------------------

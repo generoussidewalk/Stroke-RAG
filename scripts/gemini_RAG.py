@@ -24,8 +24,8 @@ from llama_index.llms.google_genai import GoogleGenAI
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q2_RAG_6.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q3.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "gemini_Q3_RAG_1.csv"
 MODEL = "gemini-2.5-flash"
 # -----------------------------
 

@@ -23,8 +23,8 @@ from llama_index.llms.ollama import Ollama
 # ---------- config ----------
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
-QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q2.txt"
-OUTPUT_FILE = PROJECT_ROOT / "responses" / "llama_Q2_RAG_6.csv"
+QUESTIONS_FILE = PROJECT_ROOT / "QA" / "Q3.txt"
+OUTPUT_FILE = PROJECT_ROOT / "responses" / "llama_Q3_RAG_1.csv"
 # -----------------------------
 
 
@@ -32,7 +32,7 @@ SYSTEM_PROMPT = """
 You are an expert acute ischemic stroke answering assistant.
 Follow any instructions given in the user message exactly, especially:
 - Answer directly.
-- Return exactly ONE sentence (no line breaks).
+- Return exactly ONE sentence (no line breaks). ONE SENTENCE ONLY.
 - Use complete sentences with rationale.
 - Always provide an answer.
 """.strip()
